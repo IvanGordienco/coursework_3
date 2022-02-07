@@ -23,14 +23,15 @@ def admin_required(func):
 
 def auth_required(func):
     def wrapper(*args, **kwargs):
+        user = None
         data = request.headers['Authorization']
         if 'Authorization' not in request.headers:
             abort(401)
         token = data.split("Bearer ")[-1]
         try:
             user = JwtToken.decode_token(token)
-            return func(*args, **kwargs, user_id=user['user_id'])
         except Exception as e:
             print("JWT Decode Exception", e)
-        abort(401)
+            abort(401)
+        return func(*args, **kwargs, user_id=user['user_id'])
     return wrapper

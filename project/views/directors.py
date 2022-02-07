@@ -18,8 +18,8 @@ class DirectorsView(Resource):
     def get(self, user_id):
         return jsonify(directors_schema.dump(director_service.get_all()))
 
-    #@admin_required
-    def post(self):
+    @admin_required
+    def post(self, user_id):
         req_json = request.json
         director = director_service.create(req_json)
         return "", 201, {"location": f"/directors/{director.id}/"}

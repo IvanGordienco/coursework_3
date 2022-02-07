@@ -1,5 +1,6 @@
 from sqlalchemy import exc
 
+from project.dao.models import User, Movie
 from project.dao.models.user_movie import User_Movie
 
 
@@ -17,3 +18,7 @@ class User_MovieDAO:
             # errorInfo = e.orig.args
             # print(f"{errorInfo}")
             self.session.rollback()
+
+    def delete(self, bid, movie_id):
+        user = self.session.query(User_Movie).filter(User_Movie.movie_id == movie_id, User_Movie.user_id == bid).delete(synchronize_session=False)
+        self.session.commit()

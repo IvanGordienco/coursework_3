@@ -4,7 +4,7 @@ from flask_restx import Api
 
 from create_data_tables import create_tables_
 from project.setup_db import db
-from project.views import genres_ns, movies_ns, directors_ns, auth_ns, users_ns, user_ns
+from project.views import genres_ns, movies_ns, directors_ns, auth_ns, users_ns, user_ns, favorites_ns
 
 api = Api(
     authorizations={
@@ -39,5 +39,6 @@ def create_app(config_obj):
     api.add_namespace(users_ns)
     api.add_namespace(user_ns)
     api.add_namespace(auth_ns)
+    api.add_namespace(favorites_ns)
     #create_data(app)
     return app

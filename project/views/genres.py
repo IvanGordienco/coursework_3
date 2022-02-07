@@ -26,14 +26,14 @@ genres_schema = GenreSchema(many=True)
 
 @genres_ns.route('/')
 class GenresView(Resource):
-    #@genres_ns.response(200, "OK")
-    #@genres_ns.response(404, "Genre not found")
-    #@auth_required
-    def get(self):
+    @genres_ns.response(200, "OK")
+    @genres_ns.response(404, "Genre not found")
+    @auth_required
+    def get(self, user_id):
         return jsonify(genres_schema.dump(genre_service.get_all()))
 
-    #@admin_required
-    def post(self):
+    @admin_required
+    def post(self, user_id):
         req_json = request.json
         genre = genre_service.create(req_json)
         return "", 201, {"location": f"/genres/{genre.id}/"}
@@ -41,10 +41,10 @@ class GenresView(Resource):
 
 @genres_ns.route('/<int:uid>')
 class GenreView(Resource):
-    #@genres_ns.response(200, "OK")
-    #@genres_ns.response(404, "Genre not found")
-    #@auth_required
-    def get(self, uid: int):
+    @genres_ns.response(200, "OK")
+    @genres_ns.response(404, "Genre not found")
+    @auth_required
+    def get(self, user_id, uid: int):
         return jsonify(genre_schema.dump(genre_service.get_one(uid)))
 
     @admin_required

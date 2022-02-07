@@ -5,5 +5,8 @@ class UserMovieService:
     def __init__(self, dao: User_MovieDAO):
         self.dao = dao
 
-    def create(self, user_movie_d):
-        return self.dao.create_user_movie(user_movie_d)
+    def create(self, data):
+        return self.dao.create_user_movie(data)
+
+    def delete(self, bid, movie_id):
+        return self.dao.delete(bid, movie_id)
