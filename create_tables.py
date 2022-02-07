@@ -1,10 +1,9 @@
-from project.config import DevelopmentConfig
+
+from project.config import DevelopmentConfig, TestingConfig
 from project.dao.models import *  # noqa F401, F403
 from project.server import create_app
 from project.setup_db import db
 
-app = create_app(DevelopmentConfig)
+app = create_app(TestingConfig)
 
-with app.app_context():
-    db.drop_all()
-    db.create_all()
+

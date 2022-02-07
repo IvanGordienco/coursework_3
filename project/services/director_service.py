@@ -1,9 +1,9 @@
-from project.dao.genre import GenreDAO
+from project.dao.director import DirectorDAO
 from project.tools.functions import set_keys
 
 
-class GenreService:
-    def __init__(self, dao: GenreDAO):
+class DirectorService:
+    def __init__(self, dao: DirectorDAO):
         self.dao = dao
 
     def get_one(self, bid):
@@ -12,8 +12,8 @@ class GenreService:
     def get_all(self):
         return self.dao.get_all()
 
-    def create(self, genre_d):
-        return self.dao.create(genre_d)
+    def create(self, director_d):
+        return self.dao.create(director_d)
 
     def update(self, data, bid):
         update = self.dao.get_one(bid)

@@ -4,7 +4,7 @@ import pytest
 
 from project.dao.models import Genre
 from project.exceptions import ItemNotFound
-from project.schemas.genre import GenreSchema
+from project.schemas.schemas import GenreSchema
 from project.services import GenresService
 
 
