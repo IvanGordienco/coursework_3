@@ -4,11 +4,12 @@ import os
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
 
+
 class BaseConfig:
     SECRET_KEY = "you-will-never-guess"
     JSON_AS_ASCII = False
 
-    ITEMS_PER_PAGE = 12
+    ITEMS_PER_PAGE = 3
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -29,5 +30,5 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(
-        os.path.dirname(BASEDIR), "project.db"
+        os.path.dirname(BASEDIR), "database/project.db"
     )

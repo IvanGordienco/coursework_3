@@ -29,7 +29,7 @@ class TestGenresView:
 class TestGenreView:
     url = "/genres/{genre_id}"
     def test_get_without_autorize(self, client):
-        response = client.get(self.url.format(genre_id=1))
+        response = client.delete(self.url.format(genre_id=1))
         assert response.status_code == 401
 
     def test_get_genre(self, client):

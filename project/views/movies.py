@@ -1,8 +1,7 @@
-from flask_restx import abort, Namespace, Resource
+from flask_restx import  Namespace, Resource
 
 from implemented import movie_service
-from project.exceptions import ItemNotFound
-from flask import request
+from flask import request, current_app
 from project.helpers.decorators import auth_required, admin_required
 from project.schemas.schemas import MovieSchema
 
@@ -25,7 +24,7 @@ class MoviesView(Resource):
             'status': status,
             'page': page_index
         }
-        page_size = 3
+        page_size = current_app.config['ITEMS_PER_PAGE']
         all_movies = movie_service.get_all(filters, page_size)
         res = MovieSchema(many=True).dump(all_movies)
         return res, 200

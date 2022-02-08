@@ -25,9 +25,9 @@ def create_tables_():
         user_movie_service.create(data)
 
     data_users = {
-        "user": [{'email': 'test@vasya1', 'name': 'vasya', 'password': 'my_little_pony', 'role': 'user', 'favorite_genre':2},
-                  {'email': 'test@vasya2', 'name': 'oleg1', 'password': 'qwerty', 'role': 'user', 'favorite_genre':4},
-                  {'email': 'test@vasya3', 'name': 'oleg', 'password': 'qwerty', 'role': 'admin', 'favorite_genre':4}]
+        "user": [{'email': 'test@vasya1', 'name': 'vasya', 'password': 'my_little_pony', 'role': 'user', 'favourite_genre':2},
+                  {'email': 'test@vasya2', 'name': 'oleg1', 'password': 'qwerty', 'role': 'user', 'favourite_genre':4},
+                  {'email': 'test@vasya3', 'name': 'oleg', 'password': 'qwerty', 'role': 'admin', 'favourite_genre':4}]
     }
 
     for k, item in enumerate(data_users["user"], 1):
@@ -36,7 +36,7 @@ def create_tables_():
             "name": item['name'],
             "password": item['password'],
             "role": item["role"],
-            "favorite_genre" : item["favorite_genre"]
+            "favourite_genre" : item["favourite_genre"]
         }
         user_service.create(data)
         user = user_service.get_one(k)
