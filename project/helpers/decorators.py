@@ -8,7 +8,7 @@ def admin_required(func):
     def wrapper(*args, **kwargs):
         if 'Authorization' not in request.headers:
             abort(401)
-        data = request.headers['Authorization']
+        data = request.headers.get('Authorization')
         token = data.split("Bearer ")[-1]
         try:
             user = JwtToken.decode_token(token)
@@ -24,7 +24,7 @@ def admin_required(func):
 def auth_required(func):
     def wrapper(*args, **kwargs):
         user = None
-        data = request.headers['Authorization']
+        data = request.headers.get('Authorization')
         if 'Authorization' not in request.headers:
             abort(401)
         token = data.split("Bearer ")[-1]

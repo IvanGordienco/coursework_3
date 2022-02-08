@@ -1,32 +1,32 @@
 ### Get Запрос Users
-GET http://127.0.0.1:10001/users/
+GET http://127.0.0.1:10001/users/1
 Content-Type: application/json
 
 ### Get Запрос Genres
 GET http://127.0.0.1:10001/genres/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 ### Get Запрос Genres
 GET http://127.0.0.1:10001/genres/19
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 ### Get Запрос movies
 GET http://127.0.0.1:10001/movies/?status=new
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 ### Get Запрос movies
 GET http://127.0.0.1:10001/movies/1
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 
 ### Post Movies на добавление
 POST http://127.0.0.1:10001/movies/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 {
   "description": "Тест",
@@ -41,7 +41,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJle
 ### Post Запрос на добавление
 POST http://127.0.0.1:10001/genres/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im9sZWciLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NDM0NTM2Njd9.2qFk7v8c14LyUbuVWAaPbL1xdtPapicP_Ml1JQT8Ozo
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 {
   "name": "gentre_test"
@@ -50,23 +50,23 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im9sZ
 ### Delete
 DELETE http://127.0.0.1:10001/genres/18
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im9sZWciLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NDM0NTM2Njd9.2qFk7v8c14LyUbuVWAaPbL1xdtPapicP_Ml1JQT8Ozo
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 
 ### PUT
 PUT http://127.0.0.1:10001/genres/18
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im9sZWciLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE2NDM0NTM2Njd9.2qFk7v8c14LyUbuVWAaPbL1xdtPapicP_Ml1JQT8Ozo
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 {
   "name": "gentre_test2"
 }
 
 ###
-POST http://127.0.0.1:10001/auth/
+POST http://127.0.0.1:10001/auth/login
 Content-Type: application/json
 
 {
-  "username": "vasya",
+  "email": "test@vasya1",
   "password": "my_little_pony"
 }
 
@@ -75,8 +75,8 @@ POST http://127.0.0.1:10001/auth/register
 Content-Type: application/json
 
 {
-  "email": "SkyUser1@test.ru",
-  "name": "SkyUser1",
+  "email": "SkyUser2@test.ru",
+  "name": "SkyUser2",
   "password": "eGGPtRKS51",
   "role": "user"
 }
@@ -99,21 +99,30 @@ Content-Type: application/json
   "password": "my_little_pony"
 }
 
+###login oleg
+POST http://127.0.0.1:10001/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@vasya3",
+  "password": "qwerty"
+}
+
 ###DELETE Users_movies
 DELETE http://127.0.0.1:10001/favorites/movies/1
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 ###POST add Users_movies
 POST http://127.0.0.1:10001/favorites/movies/1
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 
 ###NewPassword
 PUT http://127.0.0.1:10001/user/password
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 {
   "old_password": "eGGPtRKS51",
@@ -122,12 +131,12 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJle
 ###GetUsers
 GET http://127.0.0.1:10001/users
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 ###PatchUser
 PATCH http://127.0.0.1:10001/user/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 {
   "favorite_genre": 1,
@@ -137,7 +146,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJle
 ###DeleteUser
 DELETE http://127.0.0.1:10001/user/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDQyODg2NTQsInJvbGUiOiJ1c2VyIn0.kC6RDcFr8lixoTBAEjnZOf9-pDxqvhvmzHTfPbLhK1o
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDQyOTg2NjcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjN9.kV535fa0_k0NXhxxuUEHnVnLbSU7D4usdUp0YBfDsOQ
 
 
 
