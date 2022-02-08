@@ -12,7 +12,7 @@ class User(BaseMixin, db.Model):
     access_token = db.Column(db.String)
     refresh_token = db.Column(db.String)
     movie = db.relationship('Movie', secondary='user_movie', overlaps="user")
-    favorite_genre = db.Column(db.Integer, db.ForeignKey("genre.id"))
+    favourite_genre = db.Column(db.Integer, db.ForeignKey("genre.id"))
 
     def __repr__(self):
         return f"<Movie '{self.name.title()}'>"

@@ -13,7 +13,7 @@ user_schema = UserSchema()
 users_schema = UserSchema(many=True)
 
 
-#Get /users
+#Get / all users
 @users_ns.route('/')
 class UsersView(Resource):
     #@admin_required
@@ -28,16 +28,10 @@ class UsersView(Resource):
 
 #Get /user получить информацию о пользователе (его профиль).
 @user_ns.route('/')
-class UsersView(Resource):
+class UserView(Resource):
     @auth_required
     def get(self, user_id: int):
-        role = request.args.get('role')
-        username = request.args.get('username')
-        data = {
-            "username": username,
-            "role": role
-        }
-        return users_schema.dump(user_service.get_all(data))
+        return user_schema.dump(user_service.get_one(user_id))
 
     # delete /user удалить себя
     @auth_required
@@ -54,13 +48,13 @@ class UsersView(Resource):
 
 
 @user_ns.route('/password')
-class UsersView(Resource):
+class UserView(Resource):
     # обновить пароль пользователя
     @auth_required
     def put(self, user_id: int):
         data = request.json
-        password_1 = data.get("old_password", None)
-        password_2 = data.get("new_password", None)
+        password_1 = data.get("password_1", None)
+        password_2 = data.get("password_2", None)
         if None in [password_1, password_2]:
             abort(400)
         user = user_service.get_one(user_id)
@@ -70,12 +64,12 @@ class UsersView(Resource):
         return "", 204
 
 
-@users_ns.route('/<int:uid>')
-# Get /Users/id by id
-class UserView(Resource):
-    @admin_required
-    def get(self, user_id, uid):
-        return make_response(jsonify(user_schema.dump(user_service.get_one(uid))), 200)
+# @users_ns.route('/<int:uid>')
+# # Get /Users/id by id
+# class UserView(Resource):
+#     @admin_required
+#     def get(self, user_id, uid):
+#         return make_response(jsonify(user_schema.dump(user_service.get_one(uid))), 200)
 
 
 

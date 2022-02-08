@@ -28,8 +28,8 @@ genres_schema = GenreSchema(many=True)
 class GenresView(Resource):
     @genres_ns.response(200, "OK")
     @genres_ns.response(404, "Genre not found")
-    @auth_required
-    def get(self, user_id):
+    #@auth_required
+    def get(self):
         return jsonify(genres_schema.dump(genre_service.get_all()))
 
     @admin_required
@@ -43,8 +43,8 @@ class GenresView(Resource):
 class GenreView(Resource):
     @genres_ns.response(200, "OK")
     @genres_ns.response(404, "Genre not found")
-    @auth_required
-    def get(self, user_id, uid: int):
+    #@auth_required
+    def get(self, uid: int):
         return jsonify(genre_schema.dump(genre_service.get_one(uid)))
 
     @admin_required

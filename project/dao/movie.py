@@ -1,5 +1,6 @@
 import sqlalchemy
 
+from project.dao.models import User_Movie
 from project.dao.models.movie import Movie
 from project.exceptions import ItemNotFound
 
@@ -15,6 +16,9 @@ class MovieDAO:
         else:
             return movie
 
+    def get_fav_user(self, user_id):
+        return self.session.query(Movie).filter(User_Movie.movie_id == Movie.id, User_Movie.user_id == user_id)
+
     def get_all(self, page_size, page_index=1):
         return self.session.query(Movie).offset((int(page_index) - 1) * page_size).limit(None)
 
@@ -29,7 +33,8 @@ class MovieDAO:
 
     def get_by_status(self, page_size=1, page_index=1):
         desc_expression = sqlalchemy.sql.expression.desc(Movie.year)
-        return self.session.query(Movie).order_by(desc_expression).offset((int(page_index) - 1) * page_size).limit(page_size)
+        return self.session.query(Movie).order_by(desc_expression).offset((int(page_index) - 1) * page_size).limit(
+            page_size)
 
     def create(self, movie_d):
         ent = Movie(**movie_d)

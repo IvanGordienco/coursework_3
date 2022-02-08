@@ -14,8 +14,8 @@ directors_schema = DirectorSchema(many=True)
 
 @directors_ns.route('/')
 class DirectorsView(Resource):
-    @auth_required
-    def get(self, user_id):
+    #@admin_required
+    def get(self):
         return jsonify(directors_schema.dump(director_service.get_all()))
 
     @admin_required

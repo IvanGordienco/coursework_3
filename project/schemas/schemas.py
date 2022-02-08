@@ -38,7 +38,7 @@ class UserSchema(Schema):
     role = EnumField(UserRole, required=True, default=UserRole.user)
     access_token = Str()
     refresh_token = Str()
-    favorite_genre = Int()
+    favourite_genre = Int()
 
 
 class UserMovie(Schema):
