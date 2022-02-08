@@ -38,6 +38,8 @@ class UserService:
         return self.dao.create_user(data)
 
     def update(self, data, bid):
+        if data.get("password"):
+            data["password"] = get_password_hash(data.get("password"))
         update = self.get_one(bid)
         set_keys(data, update)
         self.dao.update(update)

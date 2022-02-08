@@ -6,7 +6,6 @@ from flask import request
 from project.helpers.decorators import auth_required, admin_required
 from project.schemas.schemas import MovieSchema
 
-
 movies_ns = Namespace('movies')
 
 
@@ -17,12 +16,17 @@ class MoviesView(Resource):
         director = request.args.get("director_id")
         genre = request.args.get("genre_id")
         year = request.args.get("year")
+        status = request.args.get("status")
+        page_index = request.args.get("page")
         filters = {
             "director_id": director,
             "genre_id": genre,
             "year": year,
+            'status': status,
+            'page': page_index
         }
-        all_movies = movie_service.get_all(filters)
+        page_size = 2
+        all_movies = movie_service.get_all(filters, page_size)
         res = MovieSchema(many=True).dump(all_movies)
         return res, 200
 
