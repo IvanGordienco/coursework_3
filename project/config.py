@@ -18,12 +18,15 @@ class BaseConfig:
 
     PWD_HASH_SALT = base64.b64decode("salt")
     PWD_HASH_ITERATIONS = 100_000
-
+    JSON_PATH = os.path.join(
+        os.path.dirname(BASEDIR), "tests/fixtures.json"
+    )
 
 class TestingConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 
 
 class DevelopmentConfig(BaseConfig):

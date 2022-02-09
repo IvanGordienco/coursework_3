@@ -1,6 +1,6 @@
 import os
 
-from implemented import user_service
+from project.implemented import user_service
 
 
 class TestAuthViewlogin:
@@ -9,7 +9,7 @@ class TestAuthViewlogin:
     def test_get_auth(self, client):
         auth_d = {
             "email": "test@vasya1",
-            "password": "my_little_pony3"
+            "password": "my_little_pony"
         }
         response = client.post(self.url, json=auth_d)
         assert response.json['access_token'] is not None

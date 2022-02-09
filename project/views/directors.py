@@ -1,7 +1,6 @@
-from flask_restx import abort, Namespace, Resource
+from flask_restx import Namespace, Resource
 
-from implemented import director_service
-from project.exceptions import ItemNotFound
+from project.implemented import director_service
 from flask import request, jsonify
 from project.helpers.decorators import auth_required, admin_required
 from project.schemas.schemas import DirectorSchema

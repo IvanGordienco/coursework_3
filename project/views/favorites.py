@@ -1,11 +1,8 @@
-from flask import jsonify
 from flask_restx import Resource, Namespace
 
-from project.helpers.decorators import admin_required, auth_required
-from implemented import user_service, user_movie_service, movie_service
+from project.helpers.decorators import auth_required
+from project.implemented import user_movie_service, movie_service
 from project.schemas.schemas import UserMovie, MovieSchema
-
-from project.views.users import users_schema
 
 favorites_ns = Namespace('favorites')
 users_movie = UserMovie(many=True)

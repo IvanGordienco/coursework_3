@@ -1,6 +1,5 @@
 import prettytable
 
-from create_data_tables import create_tables_
 from project.config import DevelopmentConfig, TestingConfig
 from project.dao.models import Genre
 from project.server import create_app, db

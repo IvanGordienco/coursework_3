@@ -1,4 +1,7 @@
-from project.exceptions import ItemNotFound
+import os,sys
 
-if 5 > 4:
-    raise ItemNotFound("Ошибка")
+
+import os
+import sys
+
+print(os.path.abspath("tests\\fixtures.json"))

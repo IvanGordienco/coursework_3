@@ -78,8 +78,8 @@ POST http://127.0.0.1:5000/auth/login
 Content-Type: application/json
 
 {
-  "email": "test@vasya3",
-  "password": "qwerty"
+  "email": "test@vasya1",
+  "password": "my_little_pony"
 }
 
 ###Create User

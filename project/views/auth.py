@@ -1,5 +1,5 @@
 from flask_restx import Resource, Namespace
-from implemented import user_service
+from project.implemented import user_service
 from flask import request, abort
 
 from project.schemas.schemas import UserSchema

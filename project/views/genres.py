@@ -1,8 +1,8 @@
-from flask_restx import abort, Namespace, Resource
+from flask_restx import Namespace, Resource
 
-from implemented import genre_service
-from flask import request, make_response, jsonify
-from project.helpers.decorators import auth_required, admin_required
+from project.implemented import genre_service
+from flask import request, jsonify
+from project.helpers.decorators import admin_required
 from project.schemas.schemas import GenreSchema
 
 

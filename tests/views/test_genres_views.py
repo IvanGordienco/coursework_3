@@ -1,8 +1,6 @@
 import os
 
-import pytest
-
-from implemented import genre_service
+from project.implemented import genre_service
 from tests.acess_ import access_token
 
 

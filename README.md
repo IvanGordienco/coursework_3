@@ -8,12 +8,12 @@ pip install -r requirements.txt
 
 - Создание моделей (очистит БД и создаст все модели, указанные в импорте)
 ```shell
-python create_tables
+create_tables_("Message")
 ```
 
 - Загрузка данных в базу
 ```shell
-python load_fixture
+python tests\load_fixtures.py
 ```
 Скрпит читает файл fixtures.json и загружает данные в базу. Если данные уже загружены - выводит соответсвующее сообщение. 
 

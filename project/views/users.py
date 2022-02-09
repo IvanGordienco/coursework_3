@@ -1,9 +1,9 @@
 from flask_restx import Resource, Namespace
 
-from project.helpers.decorators import admin_required, auth_required
-from implemented import user_service
+from project.helpers.decorators import auth_required
+from project.implemented import user_service
 from project.schemas.schemas import UserSchema
-from flask import request, abort, jsonify, make_response
+from flask import request, abort
 
 from project.tools.security import compare_passwords
 

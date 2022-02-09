@@ -1,8 +1,6 @@
 import os
 
-import pytest
-
-from implemented import movie_service
+from project.implemented import movie_service
 from tests.acess_ import access_token
 
 

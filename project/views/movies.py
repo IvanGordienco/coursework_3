@@ -1,6 +1,6 @@
 from flask_restx import  Namespace, Resource
 
-from implemented import movie_service
+from project.implemented import movie_service
 from flask import request, current_app
 from project.helpers.decorators import auth_required, admin_required
 from project.schemas.schemas import MovieSchema
