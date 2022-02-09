@@ -1,7 +1,7 @@
 import sqlalchemy
 from sqlalchemy.orm.exc import NoResultFound
 
-from project.dao.models.genre import Genre
+from project.dao.models import Genre
 from project.exceptions import ItemNotFound
 
 

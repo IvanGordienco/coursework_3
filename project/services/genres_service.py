@@ -1,4 +1,4 @@
-from project.dao.genre import GenreDAO
+from project.dao import GenreDAO
 from project.tools.functions import set_keys
 
 
@@ -18,7 +18,7 @@ class GenreService:
     def update(self, data, bid):
         update = self.dao.get_one(bid)
         set_keys(data, update)
-        self.dao.update(update)
+        return self.dao.update(update)
 
     def delete(self, rid):
         self.dao.delete(rid)

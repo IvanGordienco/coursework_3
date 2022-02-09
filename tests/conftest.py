@@ -5,7 +5,8 @@ from project.config import TestingConfig, DevelopmentConfig
 from project.server import create_app
 from project.setup_db import db as database
 from project.tools.functions import create_tables_
-
+from tests.services.test_genres_service import genre_dao_test
+#Делаем импорт в конфтест для использования в проекте
 
 @pytest.fixture
 def app():
