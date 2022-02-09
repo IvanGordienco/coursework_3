@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, current_app
 from flask_cors import CORS
 from flask_restx import Api
 
@@ -21,7 +21,7 @@ cors = CORS()
 
 def create_data(app):
     with app.app_context():
-        create_tables_("Data")
+        create_tables_("Data", current_app.config['JSON_PATH'])
 
 def create_app(config_obj):
     app = Flask(__name__)

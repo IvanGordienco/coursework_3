@@ -14,11 +14,9 @@ def app():
         yield app
 
 
-@pytest.fixture
+@pytest.fixture()
 def db(app):
     database.init_app(app)
-    database.drop_all()
-    database.create_all()
     create_tables_("Fixtures", current_app.config['JSON_PATH'])
     yield database
     database.session.rollback()
