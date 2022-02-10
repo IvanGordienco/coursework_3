@@ -1,7 +1,7 @@
 import prettytable
 
 from project.config import DevelopmentConfig, TestingConfig
-from project.dao.models import Genre
+from project.models import Genre
 from project.server import create_app, db
 
 app = create_app(DevelopmentConfig)

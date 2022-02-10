@@ -1,6 +1,6 @@
 import pytest, os
 from unittest.mock import MagicMock
-from project.dao.models.genre import Genre
+from project.models.genre import Genre
 from project.implemented import genre_dao
 from project.services.genres_service import GenreService
 

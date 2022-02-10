@@ -1,4 +1,4 @@
-from project.dao.models.base import BaseMixin
+from project.models.base import BaseMixin
 from project.services.enums import UserRole
 from project.setup_db import db
 

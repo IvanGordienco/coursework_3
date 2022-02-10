@@ -1,6 +1,6 @@
 from project.dao.director import DirectorDAO
 from project.dao.genre import GenreDAO
-from project.dao.models import Director, Genre
+from project.models import Director, Genre
 from project.dao.movie import MovieDAO
 from project.dao.user import UserDAO
 from project.dao.user_movie import User_MovieDAO

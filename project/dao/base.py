@@ -1,4 +1,3 @@
-from project.dao.models.director import Director
 from project.exceptions import ItemNotFound
 
 

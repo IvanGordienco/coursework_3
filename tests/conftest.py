@@ -1,5 +1,4 @@
 import pytest
-from flask import current_app
 
 from project.config import TestingConfig, DevelopmentConfig
 from project.server import create_app

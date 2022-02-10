@@ -1,7 +1,7 @@
 import sqlalchemy
 
-from project.dao.models import User_Movie
-from project.dao.models.movie import Movie
+from project.models.user_movie import User_Movie
+from project.models.movie import Movie
 from project.exceptions import ItemNotFound
 
 

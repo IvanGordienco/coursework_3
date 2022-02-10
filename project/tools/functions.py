@@ -2,7 +2,7 @@ import json
 import os
 
 from project.setup_db import db
-from project.dao.models import *
+from project.models import *
 from project.tools.security import get_password_hash
 from sqlalchemy.exc import IntegrityError
 

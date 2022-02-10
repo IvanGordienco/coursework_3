@@ -1,7 +1,6 @@
 from sqlalchemy import exc
 
-from project.dao.models import User, Movie
-from project.dao.models.user_movie import User_Movie
+from project.models.user_movie import User_Movie
 
 
 class User_MovieDAO:
