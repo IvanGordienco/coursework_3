@@ -8,3 +8,5 @@ def load_fixtures_():
     with current_app.app_context():
         create_tables_("Fixtures", current_app.config['JSON_PATH'])
 
+if __name__ == '__main__':
+    load_fixtures_()
