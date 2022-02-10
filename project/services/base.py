@@ -14,10 +14,11 @@ class BaseService:
     def create(self, data):
         return self.dao.create(data)
 
+    #Готовим update и только потом передаем в базу, решил на уровне базы не возится с data
     def update(self, data, bid):
         update = self.dao.get_one(bid)
         set_keys(data, update)
-        self.dao.update(update)
+        return self.dao.update(update)
 
     def delete(self, rid):
         self.dao.delete(rid)

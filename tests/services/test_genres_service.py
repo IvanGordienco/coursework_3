@@ -53,7 +53,7 @@ class TestUserService:
             "name": "Dan2"
         }
         genre = self.genre_service.update(genre_d, 1)
-        assert genre.name == "Dan2", f'genre.id должен быть равным 4, но он равен {genre.name}'
+        assert genre.name == "Dan2", f'genre.id должен быть равным 4, но он равен {genre.id}'
 
 
 if __name__ == "__main__":
