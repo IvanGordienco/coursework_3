@@ -5,7 +5,7 @@ class BaseDAO:
     def __init__(self, session, module):
         self.session = session
         self.module = module
-        self.message = 'message'
+        self.message = module.__name__
 
     def get_one(self, bid):
         director = self.session.query(self.module).get(bid)
